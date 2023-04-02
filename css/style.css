@@ -8,9 +8,9 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 125px; 
+    height: 125px;
     background: linear-gradient(to top, #4B2E0F, #8B4513);
-  }
+}
 
 
 .game-board {
@@ -42,24 +42,90 @@
 }
 
 
-.clouds{
+.clouds {
+    padding-top: 20px;
     position: absolute;
     animation: clouds-animation 10s infinite linear;
-    width: 210px
+    width: 210px;
+
+
+}
+
+.clouds.gameOver {
+    animation-play-state: paused;
+}
+
+.gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    margin-top: 50px;
+}
+
+
+#counter {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#restart-btn {
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    background-color: #f7d1d1;
+    background-size: cover;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    width: 150px;
+    height: 50px;
+  }
+
+.mario-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #dc291e;
+    border: none;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.mario-btn:hover {
+    background-color: #fff;
+    color: #dc291e;
+    text-shadow: none;
 }
 
 
 
-@keyframes pipe-animation{
+@keyframes pipe-animation {
     from {
         right: -80px;
     }
+
     to {
         right: 100%;
     }
 }
 
-@keyframes jump{
+@keyframes jump {
 
     0% {
         bottom: 0;
@@ -76,18 +142,19 @@
     60% {
         bottom: 150px;
     }
-    
+
     100% {
         bottom: 0;
     }
 
 }
 
-@keyframes clouds-animation{
-    from{
+@keyframes clouds-animation {
+    from {
         right: -210px;
     }
-    to{
+
+    to {
         right: 100%;
     }
 }
